@@ -32,9 +32,8 @@ module.exports = defineConfig({
     trace: 'on-first-retry',
   },
 
-  
 
-  /* Configure projects for major browsers */
+  /* Configure projects in a differemt browsers */
   projects: [
     {
       name: 'chromium',
@@ -45,40 +44,15 @@ module.exports = defineConfig({
 
     // {
     //   name: 'firefox',
+    //headless: false,
     //   use: { ...devices['Desktop Firefox'] },
     // },
 
     // {
     //   name: 'webkit',
+     //headless: false,
     //   use: { ...devices['Desktop Safari'] },
-    // },
-
-    /* Test against mobile viewports. */
-    // {
-    //   name: 'Mobile Chrome',
-    //   use: { ...devices['Pixel 5'] },
-    // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
+    // },    
   ],
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://127.0.0.1:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
 });
 

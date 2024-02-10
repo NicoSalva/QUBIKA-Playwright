@@ -5,18 +5,7 @@ Before starting, make sure you have Node.js installed on your system. This proje
 
 # 💡Installation
 
-To install and set up the project in your local environment, follow these steps:
 
-Run the install command and select the following to get started:
-
-```
-npm init playwright@latest
-```
-
-Choose JavaScript
-Name of your Tests folder
-Add a GitHub Actions workflow to easily run tests on CI
-Install Playwright browsers (default is true)
 
 Clone the Repository
 
@@ -34,7 +23,7 @@ npm install
 
 This will install Playwright along with any other dependency defined in your package.json file.
 
-Running Tests
+# Running Tests
 
 To run the automated tests with Playwright, use the following command:
 
@@ -42,7 +31,7 @@ npx playwright test
 
 This command will execute all the tests defined in your project according to Playwright's default configuration.
 
-Viewing Reports
+# Viewing Reports
 
 After running the tests, you can open the test reports with the following command:
 
