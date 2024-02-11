@@ -3,10 +3,11 @@
 Prerequisites
 Before starting, make sure you have Node.js installed on your system. This project has been developed and tested with Node.js version 8.19.4.
 
+- Node.js (https://nodejs.org/)
+- npm (comes with Node.js)
+
+
 # 💡Installation
-
-
-
 # Clone the Repository
 
 
@@ -44,8 +45,6 @@ After running the tests, you can open the test reports with the following comman
 npx playwright show-report
 
 ### QUBIKA PLAYWRIGHT SOLUTION
-
-### Introduction
 
 Although the project is small and we could set up the test suite with all the elements to be consumed within its own development, I have tried to apply a structure so that the project is scalable. This way, if we need to add more tests or more parts of the page to test, it will be practical and, above all, maintainable. Best practices not only prevent us from being redundant but also allow us to have much more maintainable and scalable code.
 
