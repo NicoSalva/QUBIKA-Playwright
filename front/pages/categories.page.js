@@ -30,12 +30,11 @@ class CategoriesPage {
         const paginationSelector = locators.categoriesPage.pageList;
         const listItems = await this.page.$$(paginationSelector);
         const numberOfItems = listItems.length;
-        const secondLastItem = listItems[numberOfItems - 2]; 
-    
-        await secondLastItem.click(); 
+        const secondLastItem = listItems[numberOfItems - 2];
+
+        await secondLastItem.click();
         await this.page.waitForSelector(locators.categoriesPage.lastPage, { state: 'attached' });
     }
-    
 
     async findLastCategoryInTable() {
         const tableSelector = locators.categoriesPage.categoriesTable;
@@ -51,11 +50,11 @@ class CategoriesPage {
         const lastTrSelector = `${tableSelector} tr:last-child`;
         const secondTdInLastTrSelector = `${lastTrSelector} > td:nth-child(2)`;
         const text = await this.page.textContent(secondTdInLastTrSelector);
-    
+
         return text;
     }
 
-    async reload(){
+    async reload() {
         await this.page.reload()
     }
 }
