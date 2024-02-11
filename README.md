@@ -7,12 +7,18 @@ Before starting, make sure you have Node.js installed on your system. This proje
 
 
 
-Clone the Repository
+# Clone the Repository
+
+
+Clone this repository to your local machine using:
+```
+https://github.com/NicoSalva/QUBIKA-Playwright.git
+```
+
+Once you have project cloned locally, goto project :
 
 ```
-Clone this repository to your local machine using:
-git clone URL_OF_THE_REPOSITORY
-cd NAME_OF_THE_DIRECTORY_REPOSITORY
+cd QUBIKA Playwright
 ```
 
 Run the following command to install all the necessary dependencies for the project:
