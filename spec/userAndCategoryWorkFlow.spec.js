@@ -25,7 +25,6 @@ test.describe('User and Category Workflow', () => {
     const dashboardPage = new DashboardPage(page);
     const categoriesPage = new CategoriesPage(page);
 
-
     // Step 1: Create a new user through API
     const createdUserResponse = await createUser(userData);
     const responseBody = await createdUserResponse.json();
