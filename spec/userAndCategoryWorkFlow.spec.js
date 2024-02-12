@@ -9,10 +9,24 @@ const { createUser } = require('../api/apiClient');
 const ajv = new Ajv();
 
 test.describe('User and Category Workflow', () => {
+  let userData, categoryName, subCategoryName;
+
+  test.beforeAll(async (browser) => {
+    //ramdon data generations
+    userData = generateUserData();
+    const categoryData = generateCategoryData();
+    categoryName = categoryData.categoryName;
+    subCategoryName = categoryData.subCategoryName;
+  })
+
   test('automate user creation to category management', async ({ page }) => {
+    // Initialize page objects
+    const homePage = new HomePage(page);
+    const dashboardPage = new DashboardPage(page);
+    const categoriesPage = new CategoriesPage(page);
+
 
     // Step 1: Create a new user through API
-    const userData = generateUserData();
     const createdUserResponse = await createUser(userData);
     const responseBody = await createdUserResponse.json();
 
@@ -29,11 +43,6 @@ test.describe('User and Category Workflow', () => {
       throw new Error(`Schema validation errors: ${ajv.errorsText(validate.errors)}`);
     }
     expect(valid).toBeTruthy();
-
-    // Initialize page objects
-    const homePage = new HomePage(page);
-    const dashboardPage = new DashboardPage(page);
-    const categoriesPage = new CategoriesPage(page);
 
     // Step 2: Navigate to the Qubika Sports Club homepage
     await homePage.goto();
@@ -54,7 +63,6 @@ test.describe('User and Category Workflow', () => {
     await categoriesPage.goto();
 
     // Step 6b: Create a new category and validate its successful creation
-    const { categoryName, subCategoryName } = generateCategoryData();
     await categoriesPage.createNewCategory(categoryName);
     await categoriesPage.gotoLastPage(); // Navigate to the last page to find the category
     const validateFirstCategory = await categoriesPage.findLastCategoryInTable();
