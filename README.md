@@ -19,7 +19,7 @@ https://github.com/NicoSalva/QUBIKA-Playwright.git
 Once you have project cloned locally, goto project :
 
 ```
-cd QUBIKA Playwright
+cd QUBIKA-Playwright
 ```
 
 Run the following command to install all the necessary dependencies for the project:
