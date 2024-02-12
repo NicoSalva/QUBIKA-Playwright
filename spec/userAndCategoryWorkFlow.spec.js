@@ -11,7 +11,7 @@ const ajv = new Ajv();
 test.describe('User and Category Workflow', () => {
   let userData, categoryName, subCategoryName;
 
-  test.beforeAll(async (browser) => {
+  test.beforeAll(async () => {
     //ramdon data generations
     userData = generateUserData();
     const categoryData = generateCategoryData();
